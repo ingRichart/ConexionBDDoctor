@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Editar la materia";
+}
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-controller="Doctor" asp-action="DoctorSave">
+
+
+<div clases="mb-3">
+    <label for="nombre" class="form-label" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="nombre" name="nombre"
+    name="nombre" placeholder="escriba la carrera" />
+</div>
+<div clases="mb-3">
+    <label for="edad" class="form-label" class="form-label">Edad</label>
+    <input type="text" class="form-control" id="edad" name="edad"
+    name="edad" placeholder="escriba la carrera" />
+</div>
+<div clases="mb-3">
+    <label for="sexo" class="form-label" class="form-label">Sexo</label>
+    <input type="text" class="form-control" id="sexo" name="sexo"
+    name="sexo" placeholder="escriba la carrera" />
+</div>
+<div clases="mb-3">
+    <label for="especialidad" class="form-label" class="form-label">Especialidad</label>
+    <input type="text" class="form-control" id="especialidad" name="especialidad"
+    name="especialidad" placeholder="escriba la carrera" />
+</div>
+<button type="submit" class="btn btn-primary">Guardar</button>
+<button type="submit" class="btn btn-secundary">cancelar</button>
+</form>

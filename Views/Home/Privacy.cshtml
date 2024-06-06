@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<table class="table">
+        <thead>
+            <tr>
+                <th Acciones></th>
+                  
+                <th>Nombre</th>
+                   <th>Edad</th>
+                      <th>Sexo</th>
+                         <th>Carreras</th>
+                           
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var Student in Model)
+            {
+                <tr>
+                    <td>
+                        <a class="btn btn-danger" asp-controller="Home" asp-action="Privacy" asp-route-id="@Student.Id">Edición</a>
+                        <a class="btn btn-primary" asp-controller="Home" asp-action="Privacy" asp-route-id="@Student.Id">Borrar</a>
+                    </td>
+                    <td>
+                        
+                        @Student.Nombre
+                          </td>
+                          <td>
+                        @Student.Edad
+                        </td>
+                          <td>
+                        @Student.Sexo
+                        </td>
+                          <td>
+                        @Student.Carrera
+                          </td>
+                    
+
+              
+                </tr>
+            }
+
+        </tbody>
+        <tfoot>
+
+
+        </tfoot>
+
+    </table>
+

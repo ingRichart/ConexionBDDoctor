@@ -22,18 +22,18 @@ namespace CRUD_Students2.Controllers
             dr.Nombre = "Lopez";
             dr.Edad = 47;
             dr.Sexo = "Masculino";
-            dr.Especialidad = "Odontología";
+           
 
 
             //  this._dbContext.Doctors.Add(dr);
             //  this._dbContext.SaveChanges();
             List<DoctorModel> list = new List<DoctorModel>();
-            list = _dbContext.Doctors.Select(s => new DoctorModel()
+            list = _dbContext.Doctors.Select(static s => new DoctorModel()
             {
                 Id = s.Id,
                 Nombre = s.Nombre,
                 Edad = s.Edad,
-                Especialidad = s.Especialidad,
+               
                 Sexo = s.Sexo,
 
 
@@ -58,7 +58,7 @@ namespace CRUD_Students2.Controllers
                     Id = Guid.NewGuid(),
                     Nombre = model.Nombre,
                     Edad = model.Edad,
-                    Especialidad = model.Especialidad,
+                   
                     Sexo = model.Sexo
                 };
 
@@ -95,7 +95,7 @@ namespace CRUD_Students2.Controllers
                 Id = doc.Id,
                 Nombre = doc.Nombre,
                 Edad = doc.Edad,
-                Especialidad = doc.Especialidad,
+              
                 Sexo = doc.Sexo
             };
 
@@ -111,7 +111,7 @@ namespace CRUD_Students2.Controllers
                 {
                     doc.Nombre = model.Nombre;
                     doc.Edad = model.Edad;
-                    doc.Especialidad = model.Especialidad;
+                 
                     doc.Sexo = model.Sexo;
                     _dbContext.SaveChanges();
                     return RedirectToAction("DoctorList");

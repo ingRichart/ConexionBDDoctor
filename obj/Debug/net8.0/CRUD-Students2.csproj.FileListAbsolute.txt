@@ -134,3 +134,4 @@ C:\Users\Manyra Cantú\Documents\Trabajos tetra 6 informatica\CRUD-Students2\CRU
 C:\Users\Manyra Cantú\Documents\Trabajos tetra 6 informatica\CRUD-Students2\CRUD-Students2\obj\Debug\net8.0\CRUD-Students2.pdb
 C:\Users\Manyra Cantú\Documents\Trabajos tetra 6 informatica\CRUD-Students2\CRUD-Students2\obj\Debug\net8.0\CRUD-Students2.genruntimeconfig.cache
 C:\Users\Manyra Cantú\Documents\Trabajos tetra 6 informatica\CRUD-Students2\CRUD-Students2\obj\Debug\net8.0\ref\CRUD-Students2.dll
+C:\Users\Manyra Cantú\Documents\Trabajos tetra 6 informatica\CRUD-Students2\CRUD-Students2\obj\Debug\net8.0\CRUD-Students2.sourcelink.json

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD_Students2.Migrations
 {
     [DbContext(typeof(AplicationDbContext))]
-    [Migration("20240606013930_CreartablaDoctor")]
-    partial class CreartablaDoctor
+    [Migration("20240608022803_CreartablaEspecialidad")]
+    partial class CreartablaEspecialidad
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -34,9 +34,6 @@ namespace CRUD_Students2.Migrations
                     b.Property<int>("Edad")
                         .HasColumnType("int");
 
-                    b.Property<string>("Especialidad")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
@@ -49,6 +46,27 @@ namespace CRUD_Students2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Doctors");
+                });
+
+            modelBuilder.Entity("CRUD_Students2.Entities.Especialidad", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Especialidad1")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Operacion")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TiempoOpera")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Especialidades");
                 });
 
             modelBuilder.Entity("CRUD_Students2.Entities.Student", b =>

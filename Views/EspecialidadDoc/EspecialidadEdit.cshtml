@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Editar al doctor";
+}
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-controller="EspecialidadDoc" asp-action="EspecialidadEdit">
+
+
+<div clases="mb-3">
+    <label for="operacion" class="form-label" class="form-label">Operacion</label>
+    <input type="text" class="form-control" id="operacion" name="operacion"
+    name="operacion" placeholder="escriba cuantas operaciones ha realizado" />
+</div>
+<div clases="mb-3">
+    <label for="especialidad1" class="form-label" class="form-label">Especialidad1</label>
+    <input type="text" class="form-control" id="especialidad1" name="especialidad1"
+    name="especialidad1" placeholder="escriba su especialidad" />
+</div>
+<div clases="mb-3">
+    <label for="tiempoOpera" class="form-label" class="form-label">TiempoOpera</label>
+    <input type="text" class="form-control" id="tiempoOpera" name="tiempoOpera"
+    name="tiempoOpera" placeholder="escriba el tiempo total que ha operado en años" />
+</div>
+
+<button type="submit" class="btn btn-primary">Guardar</button>
+<button type="submit" class="btn btn-secundary">cancelar</button>
+</form>

@@ -11,5 +11,8 @@ namespace CRUD_Students2
         }
         public DbSet<Student> Students { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Especialidad> Especialidades { get; set; }
+        
+        
     }
 }

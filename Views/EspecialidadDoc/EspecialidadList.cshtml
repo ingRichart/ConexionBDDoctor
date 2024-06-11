@@ -1,0 +1,55 @@
+@model IEnumerable<EspecialidadModel>;
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+<hr>
+  <a <a asp-controller="EspecialidadDoc" asp-action="EspecialidadSave" class="btn btn-primary mb-3">
+        Agregar Doctor
+
+    </a>
+<table class="table">
+        <thead>
+            <tr>
+                <th Acciones></th>
+                  
+                <th>Operacion</th>
+                   <th>Especialidad</th>
+                      <th>Tiempo Operacion</th>
+                       
+                           
+            </tr>
+
+        </thead>
+        <tbody>
+            @foreach (var espe in Model)
+            {
+                <tr>
+                    <td>
+                        <a class="btn btn-danger" asp-controller="EspecialidadDoc" asp-action="EspecialidadEdit" asp-route-id="@espe.Id">Edición</a>
+                        <a class="btn btn-primary" asp-controller="EspecialidadDoc" asp-action="EspecialidadDeleted" asp-route-id="@espe.Id">Borrar</a>
+                    </td>
+                    <td>
+                        
+                        @espe.Operacion
+                        </td>
+                        <td>
+                        @espe.Especialidad1
+                        </td>
+                        <td>
+                        @espe.TiempoOpera
+                        </td>
+                    
+                    
+
+                
+                </tr>
+            }
+
+        </tbody>
+        <tfoot>
+
+
+        </tfoot>
+
+    </table>
